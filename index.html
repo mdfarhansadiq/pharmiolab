@@ -117,17 +117,30 @@
         height: 66px;
       }
       .logo {
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        gap: 10px;
-        font:
-          800 24px Mukta,
-          sans-serif;
+        gap: 12px;
         color: var(--navy);
+        line-height: 1;
+        font-family: "Cormorant Garamond", Georgia, serif;
       }
-      .logo b {
-        color: var(--teal);
-        font-weight: 800;
+      .logo-mark {
+        display: block;
+        width: 94px;
+        height: 94px;
+        flex-shrink: 0;
+      }
+      .logo-word {
+        display: inline-block;
+        font-size: clamp(3.2rem, 5vw, 5.7rem);
+        font-weight: 700;
+        letter-spacing: -0.08em;
+      }
+      .logo-word.main {
+        color: #0b2d57;
+      }
+      .logo-word.accent {
+        color: #1ea4a1;
       }
       nav ul {
         display: flex;
@@ -1024,17 +1037,11 @@
     </div>
     <header>
       <div class="wrap">
-        <a class="logo" href="#top" aria-label="Pharmiolab home"
-          ><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
-            <path
-              d="M17 2l13 7.5v15L17 32 4 24.5v-15z"
-              fill="none"
-              stroke="#0f9d8a"
-              stroke-width="3"
-            />
-            <circle cx="17" cy="17" r="5" fill="#f28c28" /></svg
-          >Pharmio<b>lab</b></a
-        >
+        <a class="logo" href="#top" aria-label="Pharmiolab home">
+          <img src="logo.png" alt="Pharmiolab logo" class="logo-mark" />
+          <span class="logo-word main">Pharmio</span
+          ><span class="logo-word accent">lab</span>
+        </a>
         <button id="menu" aria-label="Open menu" aria-expanded="false">
           &#9776;
         </button>

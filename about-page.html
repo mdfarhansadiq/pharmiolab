@@ -82,13 +82,28 @@
       .logo {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         color: var(--navy);
-        font-size: 29px;
-        font-weight: 700;
+        line-height: 1;
+        font-family: "Cormorant Garamond", Georgia, serif;
       }
-      .logo b {
-        color: var(--teal);
+      .logo-mark {
+        display: block;
+        width: 92px;
+        height: 92px;
+        flex-shrink: 0;
+      }
+      .logo-word {
+        display: inline-block;
+        font-size: clamp(3.1rem, 5vw, 5.3rem);
+        font-weight: 700;
+        letter-spacing: -0.08em;
+      }
+      .logo-word.main {
+        color: #0b2d57;
+      }
+      .logo-word.accent {
+        color: #1ea4a1;
       }
       nav ul {
         list-style: none;
@@ -387,16 +402,9 @@
     <header>
       <div class="wrap">
         <a class="logo" href="index.html" aria-label="Pharmiolab homepage">
-          <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
-            <path
-              d="M17 2l13 7.5v15L17 32 4 24.5v-15z"
-              fill="none"
-              stroke="#0f9d8a"
-              stroke-width="3"
-            />
-            <circle cx="17" cy="17" r="5" fill="#f28c28" />
-          </svg>
-          Pharmio<b>lab</b>
+          <img src="logo.png" alt="Pharmiolab logo" class="logo-mark" />
+          <span class="logo-word main">Pharmio</span
+          ><span class="logo-word accent">lab</span>
         </a>
         <button
           id="menu"
